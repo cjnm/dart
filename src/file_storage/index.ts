@@ -4,7 +4,7 @@ import S3FileServices from './s3';
 import SupabaseFileServices from './supabase';
 
 export default class StorageProvider implements FileServices {
-  private _storageProvider;
+  private _storageProvider: any;
   constructor(storageProvider: StorageProviders) {
     // if (!storageProvider) {
     //   throw new Error('Initalization error.');
