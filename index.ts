@@ -28,9 +28,3 @@ export default class FileSDK implements SDKServices {
     this.db.getURL(filename);
   }
 }
-
-console.log('start');
-let x = new FileSDK({ dbProvider: DBProviders.supabase, storageProvider: StorageProviders.s3 });
-
-x.download('xxy apple');
-x.upload('xxz ball');
