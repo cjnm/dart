@@ -1,6 +1,6 @@
 enum DBProviderTypes {
-  mysql,
-  supabase
+  mysql = "mysql",
+  supabase = "supabase"
 }
 
 export default DBProviderTypes;

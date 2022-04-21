@@ -5,10 +5,10 @@ import SupabaseFileServices from './supabase';
 
 export default class StorageProvider implements FileServices {
   private _storageProvider: any;
-  constructor(storageProvider: StorageProviderTypes) {
-    // if (!storageProvider) {
-    //   throw new Error('Initalization error.');
-    // }
+  constructor(storageProvider: string) {
+    if (!(<any>Object).values(StorageProviderTypes).includes(storageProvider)) {
+      throw new Error(`StorageProvider: ${storageProvider} unavailable`);
+    }
 
     if (storageProvider === StorageProviderTypes.supabase) {
       this._storageProvider = new SupabaseFileServices();

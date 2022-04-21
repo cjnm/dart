@@ -1,6 +1,6 @@
 enum StorageProviderTypes {
-  s3,
-  supabase
+  s3 = "s3",
+  supabase = "supabase"
 }
 
 export default StorageProviderTypes;

@@ -6,10 +6,10 @@ import MySQLDatabaseServices from './mysql';
 export default class DBProvider implements DatabaseServices {
   private _dbProvider: any;
 
-  constructor(dbProvider: DBProviderTypes) {
-    // if (!dbProvider) {
-    //   throw new Error('Initalization error.');
-    // }
+  constructor(dbProvider: string) {
+    if (!(<any>Object).values(DBProviderTypes).includes(dbProvider)) {
+      throw new Error(`DBProvider: ${dbProvider} unavailable`);
+    }
 
     if (dbProvider === DBProviderTypes.supabase) {
       this._dbProvider = new SupabaseDatabaseServices();
