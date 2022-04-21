@@ -1,19 +1,19 @@
 import DatabaseServices from './type';
-import DBProviders from '../types/DBProviders';
+import DBProviderTypes from '../types/DBProviderTypes';
 import SupabaseDatabaseServices from './supabase';
 import MySQLDatabaseServices from './mysql';
 
 export default class DBProvider implements DatabaseServices {
   private _dbProvider: any;
 
-  constructor(dbProvider: DBProviders) {
+  constructor(dbProvider: DBProviderTypes) {
     // if (!dbProvider) {
     //   throw new Error('Initalization error.');
     // }
 
-    if (dbProvider === DBProviders.supabase) {
+    if (dbProvider === DBProviderTypes.supabase) {
       this._dbProvider = new SupabaseDatabaseServices();
-    } else if (dbProvider === DBProviders.mysql) {
+    } else if (dbProvider === DBProviderTypes.mysql) {
       this._dbProvider = new MySQLDatabaseServices();
     }
   }

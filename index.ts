@@ -1,14 +1,15 @@
 import SDKServices from "./src/types/SDKServices";
-import DBProviders from "./src/types/DBProviders";
-import StorageProviders from "./src/types/StorageProviders";
+import DBProviderTypes from "./src/types/DBProviderTypes";
+import StorageProviderTypes from "./src/types/StorageProviderTypes";
 import DBProvider from "./src/database";
 import StorageProvider from "./src/file_storage";
 
+export { DBProviderTypes, StorageProviderTypes };
 export default class FileSDK implements SDKServices {
   private storage;
   private db;
 
-  constructor(config: { dbProvider: DBProviders, storageProvider: StorageProviders }) {
+  constructor(config: { dbProvider: DBProviderTypes, storageProvider: StorageProviderTypes }) {
     const { dbProvider, storageProvider } = config;
 
     // if (!dbProvider || !storageProvider) {
