@@ -1,6 +1,6 @@
-import DatabaseServices from '../type';
+import IDatabaseServices from '../type';
 
-export default class SupabaseDatabaseServices implements DatabaseServices {
+export default class SupabaseDatabaseServices implements IDatabaseServices {
   constructor() { }
 
   save = (file: any) => {

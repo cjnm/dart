@@ -1,4 +1,4 @@
-import SDKServices from "./src/types/SDKServices";
+import ISDKServices from "./src/types/SDKServices";
 import DBProviderTypes from "./src/types/DBProviderTypes";
 import StorageProviderTypes from "./src/types/StorageProviderTypes";
 import DBProvider from "./src/database";
@@ -6,7 +6,7 @@ import StorageProvider from "./src/file_storage";
 
 // Available DBProviders and StorageProvider typws
 export { DBProviderTypes, StorageProviderTypes };
-export default class FileSDK implements SDKServices {
+export default class FileSDK implements ISDKServices {
   private storage;
   private db;
 

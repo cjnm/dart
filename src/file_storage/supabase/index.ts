@@ -1,7 +1,7 @@
-import FileServices from '../type';
+import IFileServices from '../type';
 
 
-export default class SupabaseFileServices implements FileServices {
+export default class SupabaseFileServices implements IFileServices {
   constructor() { }
 
   upload = (file: any) => {

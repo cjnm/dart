@@ -1,5 +1,5 @@
-interface FileServices {
+interface IFileServices {
   upload: (file: any) => any;
 }
 
-export default FileServices;
+export default IFileServices;

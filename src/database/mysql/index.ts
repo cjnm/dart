@@ -1,6 +1,6 @@
-import DatabaseServices from '../type';
+import IDatabaseServices from '../type';
 
-export default class MySQLDatabaseServices implements DatabaseServices {
+export default class MySQLDatabaseServices implements IDatabaseServices {
   constructor() { }
 
   save = (file: any) => {

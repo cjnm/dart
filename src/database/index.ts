@@ -1,9 +1,9 @@
-import DatabaseServices from './type';
+import IDatabaseServices from './type';
 import DBProviderTypes from '../types/DBProviderTypes';
 import SupabaseDatabaseServices from './supabase';
 import MySQLDatabaseServices from './mysql';
 
-export default class DBProvider implements DatabaseServices {
+export default class DBProvider implements IDatabaseServices {
   private _dbProvider: any;
 
   constructor(dbProvider: string) {

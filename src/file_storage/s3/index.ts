@@ -1,6 +1,6 @@
-import FileServices from '../type';
+import IFileServices from '../type';
 
-export default class S3FileServices implements FileServices {
+export default class S3FileServices implements IFileServices {
   constructor() { }
 
   upload = (file: any) => {

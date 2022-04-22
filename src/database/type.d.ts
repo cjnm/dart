@@ -1,6 +1,6 @@
-interface DatabaseServices {
+interface IDatabaseServices {
   save: (file: any) => any;
   getURL: (filename: string) => any;
 }
 
-export default DatabaseServices;
+export default IDatabaseServices;
