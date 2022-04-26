@@ -2,6 +2,7 @@ import IDatabaseServices from './type';
 import DBProviderTypes from '../types/DBProviderTypes';
 import SupabaseDatabaseServices from './supabase';
 import MySQLDatabaseServices from './mysql';
+import DynamoDBDatabaseServices from './dynamoDB';
 
 export default class DBProvider implements IDatabaseServices {
   private _dbProvider: any;
@@ -15,6 +16,8 @@ export default class DBProvider implements IDatabaseServices {
       this._dbProvider = new SupabaseDatabaseServices();
     } else if (dbProvider === DBProviderTypes.mysql) {
       this._dbProvider = new MySQLDatabaseServices();
+    } else if(dbProvider === DBProviderTypes.dynamodb) {
+      this._dbProvider = new DynamoDBDatabaseServices();
     }
   }
 

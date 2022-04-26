@@ -2,7 +2,7 @@ import FileSDK, { DBProviderTypes, StorageProviderTypes } from './index';
 
 console.log('start');
 let x = new FileSDK({
-  dbProvider: 'mysql',
+  dbProvider: DBProviderTypes.dynamodb,
   storageProvider: 's3',
 });
 

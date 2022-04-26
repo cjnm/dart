@@ -6,8 +6,13 @@ import StorageProvider from "./src/file_storage";
 
 // Available DBProviders and StorageProvider typws
 export { DBProviderTypes, StorageProviderTypes };
+
 export default class FileSDK implements ISDKServices {
+
+  //File storage service
   private storage;
+
+  //DB storage for file metadata
   private db;
 
   constructor(config: { dbProvider: string, storageProvider: string }) {
