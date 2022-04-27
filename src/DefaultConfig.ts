@@ -11,7 +11,7 @@ const defaultRestrictions: Restrictions = {
 export const DEFAULT_CONFIG: FilerOptions = {
   restrictions: { ...defaultRestrictions },
   dbProvider: DBProviderTypes.dynamodb,
-  storageProvider: StorageProviderTypes.s3,
+  storageProvider: 's3',
   dbProviderConfig: '',
   storageProviderConfig: ''
 }

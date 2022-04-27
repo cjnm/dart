@@ -13,8 +13,8 @@ export type Restrictions = {
 export interface FilerOptions {
   id?: string
   restrictions?: Restrictions
-  dbProvider: DBProviderTypes
-  storageProvider: StorageProviderTypes
+  dbProvider: DBProviderTypes | string
+  storageProvider: StorageProviderTypes | string
   dbProviderConfig: Object
   storageProviderConfig: Object
   cacheControl?: string
